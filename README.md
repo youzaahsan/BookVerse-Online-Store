@@ -9,7 +9,6 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)
-![Responsive Design](https://img.shields.io/badge/Responsive-Design-blue?style=for-the-badge)
 ![Frontend](https://img.shields.io/badge/Frontend-Web_Development-black?style=for-the-badge)
 
 </div>
@@ -18,11 +17,11 @@
 
 ## 🌟 About The Project
 
-**BookVerse Store** is a modern and responsive online bookstore website designed to provide users with a seamless book browsing and shopping experience.
+**BookVerse Store** is a modern online bookstore website designed to provide users with a seamless book browsing and shopping experience.
 
 The platform features organized book collections, category-based navigation, wishlist management, shopping cart functionality, flash sale promotions, ratings & reviews, and an intuitive user interface that enhances user engagement.
 
-Built with **HTML5**, **CSS3**, and **JavaScript**, the project demonstrates modern frontend development practices and responsive web design principles.
+Built with **HTML5**, **CSS3**, and **JavaScript**, the project demonstrates modern frontend development practices and interactive web design principles.
 
 ---
 
@@ -60,9 +59,9 @@ Display customer feedback and book ratings.
 
 Dedicated area for user-related actions.
 
-### 📱 Fully Web Design
+### 📱 Cross-Platform Experience
 
-Optimized experience across desktop, tablet, and mobile devices.
+Optimized user experience across multiple devices and screen sizes.
 
 ### 🎨 Modern UI/UX
 
@@ -80,9 +79,9 @@ Clean, attractive, and user-friendly interface.
 
 ### Design & Development
 
-* Responsive Web Design
 * Modern UI/UX Principles
 * Interactive User Experience
+* E-Commerce Interface Design
 
 ---
 
@@ -121,13 +120,13 @@ Provide easy navigation and account-related features.
 ## 🎯 Skills Demonstrated
 
 * Frontend Web Development
-* Web Design
 * UI/UX Design
 * JavaScript Development
 * DOM Manipulation
 * Interactive User Interfaces
 * E-Commerce Website Development
-* Mobile-First Design
+* Modern CSS Techniques
+* User Experience Design
 
 ---
 
@@ -194,7 +193,7 @@ Feel free to fork this repository and submit a pull request.
 
 ### Youza Ahsan
 
-Frontend Developer passionate about creating modern, responsive, and user-focused web applications.
+Frontend Developer passionate about creating modern, interactive, and user-focused web applications.
 
 ---
 
