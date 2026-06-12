@@ -60,7 +60,7 @@ Display customer feedback and book ratings.
 
 Dedicated area for user-related actions.
 
-### 📱 Fully Responsive Design
+### 📱 Fully Web Design
 
 Optimized experience across desktop, tablet, and mobile devices.
 
@@ -121,7 +121,7 @@ Provide easy navigation and account-related features.
 ## 🎯 Skills Demonstrated
 
 * Frontend Web Development
-* Responsive Web Design
+* Web Design
 * UI/UX Design
 * JavaScript Development
 * DOM Manipulation
