@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Books | Premium Online Bookstore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Icon Library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="book-loader"></div>
+            <h2>LUXE BOOKS</h2>
+        </div>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">LUXE BOOKS</div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#featured" class="nav-link">Books</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#offers" class="nav-link">Offers</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <div class="search-box">
+                    <i data-lucide="search"></i>
+                    <input type="text" placeholder="Search books...">
+                </div>
+                <div class="icon-btn" id="navWishlistBtn">
+                    <i data-lucide="heart"></i>
+                    <span class="badge" id="wishlistBadge">0</span>
+                </div>
+                <div class="icon-btn" id="navCartBtn">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="badge" id="cartBadge">0</span>
+                </div>
+                <div class="icon-btn">
+                    <i data-lucide="user"></i>
+                </div>
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-toggle" id="mobileMenuToggle">
+                    <i data-lucide="menu"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home">Home</a>
+            <a href="#featured">Books</a>
+            <a href="#categories">Categories</a>
+            <a href="#offers">Offers</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Discover Your Next <span class="gradient-text">Favorite Book</span></h1>
+            <p class="hero-subtitle">Step into a world of knowledge with our premium collection of futuristic, sci-fi, and educational literature.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="document.getElementById('featured').scrollIntoView()">Explore Collection</button>
+                <button class="btn-secondary">View Offers</button>
+            </div>
+        </div>
+        <div class="hero-visuals">
+            <img src="book_cover.png" alt="Book 1" class="floating-book book-1">
+            <img src="book_cover_2.png" alt="Book 2" class="floating-book book-2">
+            <div class="hero-glow"></div>
+        </div>
+    </header>
+
+    <!-- Statistics Section -->
+    <section class="section stats-section">
+        <div class="stats-grid" id="statsContainer">
+            <div class="stat-card">
+                <h2 class="counter" data-target="50000">0</h2><span>+</span>
+                <p>Books Sold</p>
+            </div>
+            <div class="stat-card">
+                <h2 class="counter" data-target="20000">0</h2><span>+</span>
+                <p>Happy Readers</p>
+            </div>
+            <div class="stat-card">
+                <h2 class="counter" data-target="10000">0</h2><span>+</span>
+                <p>Orders Delivered</p>
+            </div>
+            <div class="stat-card">
+                <h2 class="counter-float" data-target="4.9">0.0</h2><span>★</span>
+                <p>Average Rating</p>
+            </div>
+            <div class="stat-card">
+                <h2 class="counter" data-target="500">0</h2><span>+</span>
+                <p>Authors</p>
+            </div>
+            <div class="stat-card">
+                <h2 class="counter" data-target="150">0</h2><span>+</span>
+                <p>Categories</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Sale Section -->
+    <section class="section flash-sale-section" id="flash-sale">
+
+        <!-- TOP: Banner with heading + countdown -->
+        <div class="flash-sale-banner-wrapper">
+            <div class="flash-sale-container">
+                <div class="flash-sale-content">
+                    <h2>⚡ <span class="gradient-text">Flash Sale</span> — Ends In</h2>
+                    <p>Massive discounts for a limited time only. Don't miss out!</p>
+                    <div class="flash-sale-divider"></div>
+                </div>
+                <div class="countdown-timer" id="countdownTimer">
+                    <div class="time-box">
+                        <span id="days">02</span>
+                        <small>Days</small>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-box">
+                        <span id="hours">15</span>
+                        <small>Hours</small>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-box">
+                        <span id="minutes">30</span>
+                        <small>Mins</small>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-box">
+                        <span id="seconds">12</span>
+                        <small>Secs</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM: Flash Sale Book Cards -->
+        <div class="flash-section-title">
+            <span>⚡ Limited Time Deals</span>
+            <h3>Grab These Books Before They're Gone!</h3>
+        </div>
+        <div class="flash-books-grid" id="flashBooksContainer">
+            <!-- Dynamically populated by JS -->
+        </div>
+
+    </section>
+
+    <!-- Featured Books Section -->
+    <section class="section" id="featured">
+        <div class="section-header">
+            <h2>Featured <span class="gradient-text">Collection</span></h2>
+            <p>Handpicked premium titles for our exclusive readers.</p>
+        </div>
+        <div class="books-grid" id="featuredBooksContainer">
+            <!-- Dynamically populated by JS -->
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section categories-section" id="categories">
+        <div class="section-header">
+            <h2>Browse by <span class="gradient-text">Category</span></h2>
+        </div>
+        <div class="categories-grid">
+            <div class="category-card"><h3>Technology</h3></div>
+            <div class="category-card"><h3>Science Fiction</h3></div>
+            <div class="category-card"><h3>Business</h3></div>
+            <div class="category-card"><h3>Design</h3></div>
+        </div>
+    </section>
+
+    <!-- Trending Books Section -->
+    <section class="section" id="trending">
+        <div class="section-header">
+            <h2>Trending <span class="gradient-text">Now</span></h2>
+            <p>Most popular books this week.</p>
+        </div>
+        <div class="books-grid" id="trendingBooksContainer">
+            <!-- Dynamically populated by JS -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="section-header">
+            <h2>Reader <span class="gradient-text">Reviews</span></h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"The absolute best premium bookstore online. The UI is incredibly smooth and the book selection is top tier!"</p>
+                <h4>- Alex M.</h4>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Love the checkout process. So simple and elegant. Will definitely buy more books from here."</p>
+                <h4>- Sarah K.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section newsletter-section" id="offers">
+        <div class="newsletter-box">
+            <h2>Get 20% Off Your First Order</h2>
+            <p>Subscribe to our premium newsletter for exclusive offers.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault();">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3 class="logo">LUXE BOOKS</h3>
+                <p>Your premium destination for the world's best books. Immerse yourself in a luxurious reading experience.</p>
+                <div class="social-icons">
+                    <i data-lucide="twitter"></i>
+                    <i data-lucide="instagram"></i>
+                    <i data-lucide="facebook"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#featured">Featured</a>
+                <a href="#categories">Categories</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">FAQ</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Email: hello@luxebooks.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Luxe Books. All rights reserved.</p>
+            <p class="developer-credit">Designed & Developed by <span class="gradient-text">Youza Ahsan</span></p>
+        </div>
+    </footer>
+
+    <!-- SIDEBARS & MODALS -->
+
+    <!-- Cart Sidebar -->
+    <div class="sidebar-overlay" id="cartOverlay"></div>
+    <div class="sidebar right-sidebar" id="cartSidebar">
+        <div class="sidebar-header">
+            <h3>Your Cart</h3>
+            <button class="close-sidebar" id="closeCartBtn"><i data-lucide="x"></i></button>
+        </div>
+        <div class="sidebar-content" id="cartItemsContainer">
+            <!-- Cart Items populated by JS -->
+            <div class="empty-state">Your cart is empty.</div>
+        </div>
+        <div class="sidebar-footer">
+            <div class="cart-summary">
+                <div class="summary-row"><span>Subtotal</span> <span id="cartSubtotal">$0.00</span></div>
+                <div class="summary-row"><span>Tax</span> <span id="cartTax">$0.00</span></div>
+                <div class="summary-row total"><span>Total</span> <span id="cartTotal">$0.00</span></div>
+            </div>
+            <button class="btn-primary full-width checkout-btn" id="proceedCheckoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="sidebar-overlay" id="wishlistOverlay"></div>
+    <div class="sidebar right-sidebar" id="wishlistSidebar">
+        <div class="sidebar-header">
+            <h3>Your Wishlist</h3>
+            <button class="close-sidebar" id="closeWishlistBtn"><i data-lucide="x"></i></button>
+        </div>
+        <div class="sidebar-content" id="wishlistItemsContainer">
+            <!-- Wishlist Items populated by JS -->
+            <div class="empty-state">Your wishlist is empty.</div>
+        </div>
+    </div>
+
+    <!-- Book Details Modal -->
+    <div class="modal-overlay" id="bookDetailsModal">
+        <div class="modal-container">
+            <button class="close-btn" id="closeBookDetailsBtn"><i data-lucide="x"></i></button>
+            <div class="modal-content" id="bookDetailsContent">
+                <!-- Dynamically populated by JS based on previous premium design -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Flow Modal -->
+    <div class="modal-overlay" id="checkoutModal">
+        <div class="modal-container checkout-container">
+            <button class="close-btn" id="closeCheckoutBtn"><i data-lucide="x"></i></button>
+            
+            <div class="checkout-steps">
+                <div class="step active" data-step="1">1. Shipping</div>
+                <div class="step" data-step="2">2. Payment</div>
+                <div class="step" data-step="3">3. Review</div>
+            </div>
+
+            <!-- Step 1: Shipping -->
+            <div class="checkout-step-content active" id="checkoutStep1">
+                <h2>Shipping Details</h2>
+                <form class="checkout-form" id="shippingForm">
+                    <div class="form-row">
+                        <div class="form-group"><label>Full Name</label><input type="text" required></div>
+                        <div class="form-group"><label>Email</label><input type="email" required></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label>Phone Number</label><input type="tel" required></div>
+                        <div class="form-group"><label>Country</label><input type="text" required></div>
+                    </div>
+                    <div class="form-group"><label>Address</label><input type="text" required></div>
+                    <div class="form-row">
+                        <div class="form-group"><label>City</label><input type="text" required></div>
+                        <div class="form-group"><label>ZIP Code</label><input type="text" required></div>
+                    </div>
+                    <button type="submit" class="btn-primary mt-20">Continue to Payment</button>
+                </form>
+            </div>
+
+            <!-- Step 2: Payment -->
+            <div class="checkout-step-content" id="checkoutStep2">
+                <h2>Payment Method</h2>
+                <div class="payment-methods">
+                    <label class="payment-method-card active">
+                        <input type="radio" name="payment" value="card" checked>
+                        <i data-lucide="credit-card"></i> Credit/Debit Card
+                    </label>
+                    <label class="payment-method-card">
+                        <input type="radio" name="payment" value="paypal">
+                        <i data-lucide="monitor"></i> PayPal / Stripe
+                    </label>
+                    <label class="payment-method-card">
+                        <input type="radio" name="payment" value="local">
+                        <i data-lucide="smartphone"></i> JazzCash / EasyPaisa
+                    </label>
+                    <label class="payment-method-card">
+                        <input type="radio" name="payment" value="cod">
+                        <i data-lucide="truck"></i> Cash on Delivery
+                    </label>
+                </div>
+
+                <!-- Credit Card UI Form -->
+                <div class="credit-card-form" id="creditCardFormUI">
+                    <div class="card-preview">
+                        <div class="card-front">
+                            <div class="card-chip"></div>
+                            <div class="card-number-display" id="displayCardNum">#### #### #### ####</div>
+                            <div class="card-details-display">
+                                <div class="card-holder-display" id="displayCardHolder">CARD HOLDER</div>
+                                <div class="card-expiry-display" id="displayCardExp">MM/YY</div>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="checkout-form" id="paymentForm">
+                        <div class="form-group"><label>Card Number</label><input type="text" id="inputCardNum" maxlength="19" placeholder="0000 0000 0000 0000" required></div>
+                        <div class="form-group"><label>Card Holder Name</label><input type="text" id="inputCardHolder" placeholder="John Doe" required></div>
+                        <div class="form-row">
+                            <div class="form-group"><label>Expiry Date</label><input type="text" id="inputCardExp" placeholder="MM/YY" maxlength="5" required></div>
+                            <div class="form-group"><label>CVV</label><input type="password" id="inputCardCvv" maxlength="3" placeholder="123" required></div>
+                        </div>
+                        <button type="submit" class="btn-primary mt-20" id="payNowBtn">Pay Securely</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Step 3: Success -->
+            <div class="checkout-step-content" id="checkoutStep3" style="text-align: center; padding: 40px 20px;">
+                <div class="success-icon">
+                    <i data-lucide="check-circle" size="80" color="#25D366"></i>
+                </div>
+                <h2 style="margin: 20px 0;">Order Successful!</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 30px;">Thank you for your premium purchase. Your order number is #LX<span id="orderNumSpan"></span>.</p>
+                <button class="btn-primary" onclick="window.location.reload()">Continue Shopping</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
